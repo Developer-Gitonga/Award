@@ -1,0 +1,272 @@
+.top {
+    max-width: 1440px;
+    margin-inline: auto;
+    background-color: #3a3a3a;
+    height: 4.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #434343;
+}
+
+.top-container {
+    max-width: 1200px;
+    width: 95%;
+    text-align: center;
+    color: #adadad;
+}
+
+.top-container h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header {
+    max-width: 1440px;
+    margin-inline: auto;
+    background-color: #3a3a3a;
+}
+
+.header-nav-container {
+    max-width: 1440px;
+    margin-inline: aut o;
+    min-height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #434343;
+}
+
+.header-nav-logo {
+    padding: 1.5rem 0;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header-nav-logo-svg {
+    padding-left: .5rem;
+}
+
+.header-nav-logo-hamburger {
+    cursor: pointer;
+    padding-right: .5rem;
+}
+
+.header-nav-logo-hamburger .active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.header-nav-logo-hamburger .active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+
+.header-nav-logo-hamburger .active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.header-nav-logo-hamburger-bar {
+    background-color: white;
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-radius: .2rem;
+}
+
+.header-nav-logo-hamburger-bar:not(:last-child) {
+    margin-bottom: .3rem;
+}
+
+.header-nav-search,
+.header-nav-rest {
+    display: none;
+}
+
+.header-nav-menu {
+    padding: 0 1.3rem;
+}
+
+.header-nav-menu-ul-submit {
+    padding: .5rem 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header-nav-menu-ul-submit a {
+    color: white;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.header-nav-menu-ul-submit a:hover {
+    color: #49c5b6;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.header-nav-menu-ul-user {
+    padding: .5rem 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header-nav-menu-ul-user a {
+    color: white;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.header-nav-menu-ul-user a:hover {
+    color: #49c5b6;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(6px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+    .header-nav {
+        width: 100%;
+        padding-left: .5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .header-nav-logo {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .header-nav-logo-hamburger {
+        display: none;
+    }
+    .header-nav-search {
+        border-radius: .1rem;
+        display: block;
+        outline: 1px solid #4D4D4D;
+    }
+    .header-nav-search-form {
+        padding-left: .2rem;
+        height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .header-nav-search-form img {
+        height: 1rem;
+    }
+    .header-nav-search-form input {
+        color: white;
+        padding: .3rem .2rem;
+        background-color: #3a3a3a;
+        border: 1px solid #3a3a3a;
+    }
+    .header-nav-search-form input:focus {
+        outline: none;
+    }
+    .header-nav-rest {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-family: 'Nunito', sans-serif;
+    }
+    .header-nav-rest-user {
+        padding-right: .7rem !important;
+    }
+    .header-nav-rest-user a {
+        font-size: 13px;
+        color: #a5a5a5;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    .header-nav-rest-user a:hover {
+        color: #e6e6e6;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    .header-nav-rest-submit {
+        background-color: #202121;
+        height: 75px;
+        width: 190px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .header-nav-rest-submit p {
+        font-size: .8rem;
+        color: #fcfcfc;
+    }
+    .header-nav-rest-submit:hover {
+        background-color: #232424;
+    }
+    .header-nav-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width:768px) {
+    .top {
+        display: none;
+    }
+}
+
+#user {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.header-nav-search-form label {
+    display: none;
+}

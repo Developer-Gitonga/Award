@@ -1,0 +1,99 @@
+{% extends 'ip3/layout.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<style>
+    .none {
+        display: none;
+    }
+</style>
+{% endblock %} {% block content %}
+<main class="main">
+    <section class="main-project" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{{ main.image.url }}');">
+        <article class="main-project-siteofday">
+            <div class="main-project-siteofday-site">
+                <p><strong>Site of the Day</strong> June 13, 2022</p>
+            </div>
+            <div class="main-project-siteofday-share">
+                <input type="text" value="{{ main.url }}" style="background:transparent; color:transparent; border:1px solid transparent; width:.1rem; height:.1rem;" id="share">
+                <img src="{% static 'images/share.png' %}" alt="" id="sharebtn">
+            </div>
+        </article>
+        <article class="main-project-title">
+            <h1><a href="{% url 'project' main.id %}">{{ main.title }}</a></h1>
+            <p class="main-project-title-p">BY <span>{{ main.user }}</span> FROM {{main.location}} WITH {{ main.average_of_all_ratings }}</p>
+            <div class="main-project-title-ratings">
+                <div class="main-project-title-ratings-design">
+                    <button>{{ main.average_of_design_ratings }}</button>
+                    <p>DESIGN</p>
+                </div>
+                <div class="main-project-title-ratings-usability">
+                    <button>{{ main.average_of_usability_ratings }}</button>
+                    <p>USABILITY</p>
+                </div>
+                <div class="main-project-title-ratings-content">
+                    <button>{{ main.average_of_content_ratings }}</button>
+                    <p>CONTENT</p>
+                </div>
+            </div>
+        </article>
+        <article class="main-project-visit">
+            <a href="{{ main.url }}" target="_blank">Visit Site</a>
+        </article>
+    </section>
+    <section class="main-list">
+        <article class="main-list-submit none" id="element">
+            <form class="main-list-submit-form" id="form" method="post" enctype='multipart/form-data'>
+                <div class="main-list-submit-form-title">
+                    <h1>Submit Your Site</h1>
+                    <p id="exit">&times;</p>
+                </div>
+                <div class="main-list-submit-form-input">
+                    {% csrf_token %} {{ form.as_p }}
+                </div>
+                <div class="main-list-submit-form-button">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </article>
+        <article class="main-list-container">
+            <div class="main-list-title">
+                <p><strong>Nominees</strong> we need your votes</p>
+            </div>
+            <ul class="main-list-ul">
+                {% for project in projects %}
+                <li class="main-list-ul-li">
+                    <div class="main-list-ul-li-image image">
+                        <img src="{{ project.image.url }}" alt="" class="image__img">
+                        <div class="image__overlay image__overlay--blur">
+                            <p>{{ project.title }}</p>
+                            <a href="{% url 'project' project.id %}" class="open-a">Open</a>
+                        </div>
+                    </div>
+                    <div class="main-list-ul-li-title">
+                        <h1><a href="{% url 'project' project.id %}">{{ project.title }}</a></h1>
+                    </div>
+                    <div class="main-list-ul-li-location">
+                        <p>{{ project.location }}</p>
+                        <p>{{ project.created }}</p>
+                    </div>
+                    <div class="main-list-ul-li-user">
+                        {% if not project.user.profile.profile_pic.url %}
+                        <img src="{% static 'images/default.jpg'%}" alt="">{% else %}
+                        <img src="{{project.user.profile.profile_pic.url}}" alt=""> {% endif %}
+                        <p>By<span> {{ project.user }}</span></p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </article>
+    </section>
+    <section class="main-footer">
+        <article class="main-footer-container">
+            <h4>Crafted with</h4>
+            <img src="{%static 'images/heart.png'%}" alt="heart">
+            <h4>By <span>Dev Gitonga</span></h4>
+        </article>
+    </section>
+</main>
+<script src="{% static 'js/pop.js' %}"></script>
+<script src="{% static 'js/copy.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,181 @@
+body {
+    background-color: #3a3a3a;
+}
+
+.login {
+    max-width: 1440px;
+    margin-inline: auto;
+    height: 100vh;
+    margin-top: 5rem;
+}
+
+.login-container {
+    border-radius: .2rem;
+    -webkit-box-shadow: 0 0 0.2rem 0.2rem #333333;
+    box-shadow: 0 0 0.2rem 0.2rem #333333;
+    background-color: teal;
+    max-width: 800px;
+    width: 95%;
+    margin-inline: auto;
+}
+
+.login-welcome {
+    text-align: center;
+    background: #2b2b23;
+    background: -webkit-gradient(linear, left top, right top, from(#2b2b23), color-stop(35%, #2b2b28), to(#2b2b23));
+    background: linear-gradient(90deg, #2b2b23 0%, #2b2b28 35%, #2b2b23 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 13rem;
+    color: white;
+}
+
+.login-welcome h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.login-welcome p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'Lato', sans-serif;
+}
+
+.login-welcome-button {
+    margin-top: 1.5rem;
+}
+
+.login-welcome a {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 7px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.login-welcome a:hover {
+    background-color: white;
+    color: black;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.login-form {
+    background-color: #999999;
+    padding: 1rem;
+    padding-top: 3rem;
+}
+
+.login-form-title h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: white;
+}
+
+.login-form form {
+    padding-top: 2rem;
+}
+
+.login-form label {
+    color: white !important;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+}
+
+.login-form input {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    padding: 0 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.login-form input:focus {
+    outline: none;
+}
+
+.login-form-signin {
+    margin-block: 1rem;
+}
+
+.login-form-signin button {
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: #2b2b23;
+    background: -webkit-gradient(linear, left top, right top, from(#2b2b23), color-stop(35%, #2b2b28), to(#2b2b23));
+    background: linear-gradient(90deg, #2b2b23 0%, #2b2b28 35%, #2b2b23 100%);
+    border: 1px solid #2b2b23;
+    cursor: pointer;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.login-form-signin button:hover {
+    background: #2b2b23;
+    background: -webkit-gradient(linear, left top, right top, from(#2b2b19), color-stop(35%, #2b2b1e), to(#2b2b19));
+    background: linear-gradient(90deg, #2b2b19 0%, #2b2b1e 35%, #2b2b19 100%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .login {
+        margin-top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .login-container {
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-rows: 400px;
+        grid-template-rows: 400px;
+    }
+    .login-welcome {
+        height: 100%;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+        grid-column: 2/3;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        grid-row: 1/2;
+    }
+    .login-form {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+        grid-column: 1/2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        grid-row: 1/2;
+    }
+}
