@@ -30,9 +30,6 @@ SECRET_KEY = 'django-insecure-^c_f^a)&_*vz^m7dt_)08n_mmj0qm)zh$z4ui#*y2$o5*wnzop
 Debug = True
 ALLOWED_HOSTS = []
 
-
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -170,6 +167,7 @@ cloudinary.config(
     api_key = "341925467838776", 
     api_secret = "shID5iCpSp2ZreEwNdxigVYlnGI" 
 )
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
