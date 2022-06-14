@@ -107,8 +107,6 @@ def profile(request):
 
 
 #API endpoints
-
-
 class ProfileViewApi(APIView):
     def get(self,request,*args,**kwargs):
         profiles = Profile.objects.all()
