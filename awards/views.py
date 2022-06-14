@@ -106,8 +106,6 @@ def profile(request):
     return render(request, 'ip3/profile.html',{"title":"Profile","form":form,"mainform":mainform,"profile":profile})
 
 
-
-
 #API endpoints
 
 
